@@ -76,3 +76,23 @@ Step3: Calculate the number of host bits that be given to the network portion
 	Third subnet range =  198.67.23.64 - 198.67.23.95
 	Fourth subnet range = 198.67.23.96 - 198.67.23.127
 	Fifth subnet	range = 198.67.23.128 - 198.67.23.159
+
+
+MoRE EXAMPLES
+---------------
+Create 4 four subnets from 172.25.17.0  
+
+Subnet mask = 255.255.0.0 = 11111111.11111111.00000000.00000000
+CIDR Range = 172.25.17.0/16
+172.25.17.0 => 172.25.0.0 to binary = 11111111.11111111.00000000.00000000
+4 = 2^n => n=2
+
+New subnet mask = 11111111.11111111.11000000.00000000 = 255.255.192.0
+
+No of hosts(including network and broadcast addr) = 2^n => 2^14 = 16384 hosts
+
+Subnets
+	Range 1: 172.25.0.0 - 172.25.63.255  Network adrr= 172.25.0.0, broadcast = 172.25.63.255, first usable address=172.25.0.1, last usable address = 172.25.63.254 
+	Range 2: 172.25.64.0 - 172.25.127.255 
+	Range 3: 172.25.128.0 - 172.25.191.255
+	Range 4: 172.25.192.0 - 172.25.255.255
